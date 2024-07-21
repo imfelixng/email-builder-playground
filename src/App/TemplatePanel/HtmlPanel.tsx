@@ -1,13 +1,15 @@
-import React, { useMemo } from 'react';
+import React, { useMemo } from "react";
 
-import { renderToStaticMarkup } from '@usewaypoint/email-builder';
+import { useDocument } from "../../documents/editor/EditorContext";
 
-import { useDocument } from '../../documents/editor/EditorContext';
-
-import HighlightedCodePanel from './helper/HighlightedCodePanel';
+import HighlightedCodePanel from "./helper/HighlightedCodePanel";
+import renderToStaticMarkup from "../../documents/renderer/renderToStaticMarkup";
 
 export default function HtmlPanel() {
   const document = useDocument();
-  const code = useMemo(() => renderToStaticMarkup(document, { rootBlockId: 'root' }), [document]);
+  const code = useMemo(
+    () => renderToStaticMarkup(document, { rootBlockId: "root" }),
+    [document]
+  );
   return <HighlightedCodePanel type="html" value={code} />;
 }
