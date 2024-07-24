@@ -4,10 +4,12 @@ import { RichTextPropsSchema } from "./prop-schema";
 import { BubbleMenu, EditorContent, useEditor, Editor } from "@tiptap/react";
 import { StarterKit } from "@tiptap/starter-kit";
 import debounce from "lodash.debounce";
+import suggestion from "./suggestion.ts";
 
 import { useCurrentBlockId } from "../../editor/EditorBlock";
 import { setDocument, useDocument } from "../../editor/EditorContext";
 import { getFontFamily, getPadding } from "./get-config";
+import Mention from "@tiptap/extension-mention";
 
 export type RichTextProps = z.infer<typeof RichTextPropsSchema>;
 
@@ -21,7 +23,15 @@ export function RichText(data: RichTextProps) {
   const currentBlock = document[currentBlockId];
 
   const editor = useEditor({
-    extensions: [StarterKit],
+    extensions: [
+      StarterKit,
+      Mention.configure({
+        HTMLAttributes: {
+          class: "mention",
+        },
+        suggestion,
+      }),
+    ],
     content: data?.props?.text ?? RichTextPropsDefaults.text,
     onUpdate() {
       updateDataDebounce();

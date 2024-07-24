@@ -788,6 +788,11 @@
   resolved "https://registry.yarnpkg.com/@tiptap/extension-list-item/-/extension-list-item-2.5.4.tgz#ad837a7ba2a0c6362020c2c1c4a2a14de684d80d"
   integrity sha512-bPxUCFt9HnAfoaZQgwqCfRAZ6L3QlYhIRDDbOvZag7IxCdQuZmeY4k5OZfQIGijNDTag7CN9cdL4fl9rnm6/sQ==
 
+"@tiptap/extension-mention@^2.5.5":
+  version "2.5.5"
+  resolved "https://registry.yarnpkg.com/@tiptap/extension-mention/-/extension-mention-2.5.5.tgz#8dc5e3d71a440ffbf73d2c3250e651096f288ef0"
+  integrity sha512-ZnymApMZL4ZEPYTgCoSa/E+72qSzNm8w4D47b9gmiU87BqNCafeKmsMExLJaGUZOK3tb3Uu6QB5XQzfkLbSgHw==
+
 "@tiptap/extension-ordered-list@^2.5.4":
   version "2.5.4"
   resolved "https://registry.yarnpkg.com/@tiptap/extension-ordered-list/-/extension-ordered-list-2.5.4.tgz#b007d46440568df87bfd166d3dea203239916744"
@@ -866,6 +871,11 @@
     "@tiptap/extension-paragraph" "^2.5.4"
     "@tiptap/extension-strike" "^2.5.4"
     "@tiptap/extension-text" "^2.5.4"
+
+"@tiptap/suggestion@^2.5.5":
+  version "2.5.5"
+  resolved "https://registry.yarnpkg.com/@tiptap/suggestion/-/suggestion-2.5.5.tgz#4f6026a1dcf38896524826aece174ddea84feb48"
+  integrity sha512-V4fqhXfcq7EaIbQvXRfCehz7Wd/qCDgFhwXPSelZglD3jWV+EJRgw6wic/yiCeC//QJ62ZgKXIyzO3f0ZcoSsg==
 
 "@types/estree@1.0.5":
   version "1.0.5"
